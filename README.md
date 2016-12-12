@@ -2,8 +2,12 @@
 
 > A full-featured markdown parser and compiler, written in JavaScript. Built
 > for speed.
+>
 
-[![NPM version](https://badge.fury.io/js/marked.png)][badge]
+Note: This is a fork of the original [marked.js](https://github.com/chjj/marked)
+with the following additions:
+
+* modified renderer to use in [greybyte/draft-js-import-markdown](https://github.com/greybyte/draft-js-import-markdown)
 
 ## Install
 
@@ -213,6 +217,11 @@ This code will output the following HTML:
 - del(*string* text)
 - link(*string* href, *string* title, *string* text)
 - image(*string* href, *string* title, *string* text)
+
+#### Renderer output methods
+
+- start(): starts a new output segment
+- add(out, fragment): combine fragment with `out` and return it
 
 ### gfm
 
